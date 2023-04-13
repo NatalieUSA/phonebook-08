@@ -12,6 +12,7 @@ import items from './items';
 
 const Navbar = () => {
   const isLogin = useSelector(isLoggedIn);
+  console.log(isLogin);
   const filteredItems = !isLogin ? items.filter(item => !item.private) : items;
   const elements = filteredItems.map(({ id, text, link }) => (
     <li key={id}>

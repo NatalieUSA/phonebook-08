@@ -8,15 +8,11 @@ import { login } from 'redux/auth/AuthOperations';
 import LoginFormElement from 'components/Login/LoginFormElement';
 
 const LoginPage = () => {
-  const isLogin = useSelector(isLoggedIn);
   const dispatch = useDispatch();
 
   const handleLogin = data => {
     dispatch(login(data));
   };
-  if (isLogin) {
-    return <Navigate to="/contacts" />;
-  }
 
   return (
     <div className="container">

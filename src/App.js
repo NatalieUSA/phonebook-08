@@ -1,5 +1,5 @@
 import NavBar from 'components/NavBar/NavBar';
-import UserRoutes from 'UserRoutes';
+import UserRoutes from 'Routes/UserRoutes';
 
 const App = () => {
   return (
