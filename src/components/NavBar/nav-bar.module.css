@@ -1,0 +1,75 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(2, 221, 250, 0.8);
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+.link {
+  text-decoration: none;
+  color: deeppink;
+  display: inline-block;
+  padding: 10px 15px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.link:global(.active) {
+  font-weight: bold;
+}
+/* .layout {
+  background: deeppink;
+  background-image: url('https://images.fineartamerica.com/images-medium-large-5/pop-art-comic-book-mouth-of-woman-drante.jpg');
+}
+
+.welcome {
+  padding: 24px;
+  min-height: 160px;
+  background-color: rgba(2, 11, 51, 0.8);
+  border-radius: 10px;
+  max-width: 600px;
+  margin: auto auto;
+  /* // padding: 24,
+  // minHeight: 360,
+  // background: 'rgba(255, 255, 255, 0.7)',
+  // // background: '#d6d4d4',
+  // */
+/* }
+.welcomeText {
+  font-size: 10px;
+  color: white;
+  text-align: center;
+}
+.btn {
+  background-color: #ff18ba;
+  margin: 0 25px;
+}
+
+.trigger {
+  padding: 0 24px;
+  font-size: 18px;
+  line-height: 64px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+.trigger:hover {
+  color: #ff18ba;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  color: deeppink;
+  background: #bdbcbd;
+} */
