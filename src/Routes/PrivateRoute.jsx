@@ -1,27 +1,38 @@
-import { Navigate, Outlet } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { getAuth } from 'redux/auth/AuthSelectors';
 
-const PrivateRoute = () => {
-  //   const isLogin = useSelector(isLoggedIn);
-  //   if (!isLogin) {
-  //     return <Navigate to="/login" />;
-  //   }
-  //   return <Outlet />;
+const PrivateRoute = ({ component: Component, redirectTo = '/' }) => {
   const { isLogin, token } = useSelector(getAuth);
-
-  if (!isLogin && token) {
-    return <p>...Loading не логин</p>;
-  }
-
-  if (!isLogin && !token) {
-    return <Navigate to="/login" />;
-  }
-
-  return <Outlet />;
+  const shouldRedirect = !isLogin && !token;
+  return shouldRedirect ? <Navigate to={redirectTo} /> : Component;
 };
 
 export default PrivateRoute;
+// import { Navigate, Outlet } from 'react-router-dom';
+// import { useSelector } from 'react-redux';
+// import { getAuth } from 'redux/auth/AuthSelectors';
+
+// const PrivateRoute = () => {
+//   //   const isLogin = useSelector(isLoggedIn);
+//   //   if (!isLogin) {
+//   //     return <Navigate to="/login" />;
+//   //   }
+//   //   return <Outlet />;
+//   const { isLogin, token } = useSelector(getAuth);
+
+//   if (!isLogin && token) {
+//     return <p>...Loading не логин</p>;
+//   }
+
+//   if (!isLogin && !token) {
+//     return <Navigate to="/login" />;
+//   }
+
+//   return <Outlet />;
+// };
+
+// export default PrivateRoute;
 
 // const PrivateRoute = () => {
 //   const token = useSelector(getToken);
