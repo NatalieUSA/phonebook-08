@@ -1,11 +1,17 @@
+import { GlobalStyle } from 'components/GlobalStyle';
+import { Wrapper } from 'shared/Wrapper/Wrapper';
+
 const HomePage = () => {
   return (
-    <div>
-      <p>It`s Your Secret</p>
-      <p>PhoneBook</p>
-      <p>First step - You need register</p>
-      <p>if You already register - enter Your Login</p>
-    </div>
+    <>
+      <GlobalStyle />
+      <Wrapper>
+        <p>It`s Your Secret</p>
+        <p>PhoneBook</p>
+        <p>First step - You need register</p>
+        <p>if You already register - enter Your Login</p>
+      </Wrapper>
+    </>
   );
 };
 

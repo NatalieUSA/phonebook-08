@@ -6,7 +6,7 @@ import useForm from 'shared/Hooks/useForm';
 import fields from './fields';
 import initialState from './initialState';
 
-import styles from './login-form.module.css';
+// import styles from './login-form.module.css';
 
 const LoginFormElement = ({ onSubmit }) => {
   const { state, handleChange, handleSubmit } = useForm({
@@ -16,7 +16,7 @@ const LoginFormElement = ({ onSubmit }) => {
   const { email, password } = state;
 
   return (
-    <form onSubmit={handleSubmit} className={styles.form}>
+    <form onSubmit={handleSubmit}>
       <TextField value={email} handleChange={handleChange} {...fields.email} />
       <TextField
         value={password}

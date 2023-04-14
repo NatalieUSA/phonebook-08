@@ -13,10 +13,10 @@ export const FormGroup = styled.div`
   list-style: none;
   margin: 30px auto;
   padding: 40px;
-  background-color: #16188d;
+  background-color: rgb(13, 55, 255, 0.95);
 
-  border-radius: 1px;
-  box-shadow: inset 6px 10px 1px 0px #68b4cf, inset -6px -10px 1px 0px deeppink;
+  border-radius: 25px;
+  box-shadow: inset 6px 6px 6px 0px #68b4cf, inset -6px -10px 10px 0px #68b4cf;
   &::-webkit-scrollbar {
     width: 10px;
   }

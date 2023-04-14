@@ -1,11 +1,20 @@
 import NavBar from 'components/NavBar/NavBar';
 import UserRoutes from 'Routes/UserRoutes';
+import { GlobalStyle } from 'components/GlobalStyle';
 
+import styles from './app.module.css';
 const App = () => {
   return (
     <>
-      <NavBar />
-      <UserRoutes />
+      <GlobalStyle />
+      <div className={styles.wrap}>
+        <div>
+          <NavBar />
+        </div>
+        <div style={{ margin: 'auto' }}>
+          <UserRoutes />
+        </div>
+      </div>
     </>
 
     // <div>
@@ -33,6 +42,7 @@ export default App;
 // // import RegisterPage from 'Pages/RegisterPage';
 // // import ContactsPage from 'Pages/ContactsPage';
 // import UserRoutes from 'UserRoutes';
+// import { GlobalStyle } from 'components/GlobalStyle';
 // const App = () => {
 //   return (
 //     <Provider store={store}>

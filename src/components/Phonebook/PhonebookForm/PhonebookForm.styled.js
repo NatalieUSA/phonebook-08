@@ -13,11 +13,10 @@ export const FormGroup = styled.div`
   list-style: none;
   margin: 30px auto;
   padding: 40px;
-  background-color: #ffa928;
-  // border-radius: 25px;
-  border-radius: 1px;
-  box-shadow: inset 6px 10px 1px 0px red, inset -6px -10px 1px 0px blue;
-
+  background-color: rgb(2, 221, 250, 0.95);
+  border-radius: 25px;
+  box-shadow: inset 6px 6px 6px 0px rgb(250, 9, 137),
+    inset -6px -10px 10px 0px rgb(250, 9, 137);
   &::-webkit-scrollbar {
     width: 10px;
   }
@@ -45,13 +44,13 @@ export const Input = styled.input`
   width: 80%;
   background: transparent;
   border: none;
-  border-bottom: 0.5px solid yellow;
+  border-bottom: 0.5px solid deeppink;
 
   outline: transparent;
   margin-right: auto;
   margin-left: auto;
   font-size: large;
-  color: yellow;
+  color: deeppink;
 
   @media (max-width: 320px) {
     width: 95%;
@@ -65,22 +64,21 @@ export const FormBtn = styled.button`
   margin-top: 30px;
   height: 50px;
   width: 140px;
-  // border-radius: 50px;
- cursor: pointer;
+  border-radius: 25px;
+  cursor: pointer;
 
   font-size: small;
   text-transform: uppercase;
- 
+
   background-color: orange;
   color: white;
 
   border-style: none;
   box-shadow: 3px 3px 3px grey;
-  
+
   :hover {
-  text-transform: lowercase;
-  background-color: deeppink;
-  color: white;
-
-
+    text-transform: lowercase;
+    background-color: deeppink;
+    color: white;
+  }
 `;

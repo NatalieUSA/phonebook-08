@@ -1,11 +1,9 @@
 .link {
-    display: inline-block;
-    margin: 0 5px;
-    text-decoration: none;
-    color: #000;
-
-  
+  display: inline-block;
+  margin: 0 5px;
+  text-decoration: none;
+  color: deeppink;
 }
 .link:global(.active) {
-        font-weight: bold;
-    }
+  font-weight: bold;
+}

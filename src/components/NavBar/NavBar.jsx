@@ -9,6 +9,7 @@ import styles from './nav-bar.module.css';
 import { isLoggedIn } from 'redux/auth/AuthSelectors';
 
 import items from './items';
+import Button from 'shared/ButtonForm/ButtonForm';
 
 const Navbar = () => {
   const isLogin = useSelector(isLoggedIn);
@@ -17,7 +18,7 @@ const Navbar = () => {
   const elements = filteredItems.map(({ id, text, link }) => (
     <li key={id}>
       <NavLink className={styles.link} to={link}>
-        {text}
+        <Button>{text}</Button>
       </NavLink>
     </li>
   ));

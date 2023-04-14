@@ -2,6 +2,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { getUser, isLoggedIn } from 'redux/auth/AuthSelectors';
 import { logout } from 'redux/auth/AuthOperations';
 import Button from 'shared/ButtonForm/ButtonForm';
+import styles from './navbar-user.module.css';
 
 const NavbarUser = () => {
   const { name, email } = useSelector(getUser);
@@ -10,8 +11,8 @@ const NavbarUser = () => {
   const dispatch = useDispatch();
 
   return (
-    <div>
-      You entered to PhoneBook with name: {name}| email: {email}
+    <div className={styles.wrap}>
+      name: {name} email: {email}
       {isLogin && (
         <Button
           onClick={() => {
