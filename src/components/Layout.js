@@ -4,7 +4,7 @@ export const Layout = styled.div`
   color: deepgrey;
   margin-right: auto;
   margin-left: auto;
-  /* width: 1000px; */
+
   font-size: 10px;
 
   @media (max-width: 767px) {

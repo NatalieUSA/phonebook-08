@@ -10,3 +10,4 @@ export const getFilteredContacts = ({ contacts, filter }) => {
   });
   return result;
 };
+export const selectLoading = store => store.loading;

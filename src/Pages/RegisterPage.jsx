@@ -1,3 +1,15 @@
+// import RegisterForm from 'components/RegisterForm/RegisterForm';
+// import { Wrapper } from 'shared/Wrapper/Wrapper';
+// const RegisterPage = () => {
+//   return (
+//     <Wrapper>
+//       <title>Registration</title>
+//       <RegisterForm />
+//     </Wrapper>
+//   );
+// };
+// export default RegisterPage;
+
 import { useDispatch } from 'react-redux';
 import { register } from 'redux/auth/AuthOperations';
 

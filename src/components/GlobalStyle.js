@@ -22,6 +22,8 @@ body {
 background-image: url("https://thumbs.dreamstime.com/b/beautiful-young-woman-talking-phone-hello-message-retro-pop-art-style-vector-illustration-97996219.jpg");
 
  background-size: cover;
+ /* width:100%; */
+ /* height:100%; */
 color: white;
 }
 

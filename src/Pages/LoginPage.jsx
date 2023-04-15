@@ -1,3 +1,19 @@
+// import { Wrapper } from 'shared/Wrapper/Wrapper';
+
+// const {
+//   default: LoginFormElement,
+// } = require('components/Login/LoginFormElement');
+
+// const LoginPage = () => {
+//   return (
+//     <Wrapper>
+//       <LoginFormElement />
+//     </Wrapper>
+//   );
+// };
+
+// export default LoginPage;
+
 import { useDispatch } from 'react-redux';
 // import { Navigate } from 'react-router-dom';
 // import { useSelector } from 'react-redux';
@@ -13,6 +29,7 @@ const LoginPage = () => {
   const dispatch = useDispatch();
 
   const handleLogin = data => {
+    console.log(data);
     dispatch(login(data));
   };
 

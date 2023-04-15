@@ -1,52 +1,24 @@
-import { useSelector, useDispatch } from 'react-redux';
-import { getUser, isLoggedIn } from 'redux/auth/AuthSelectors';
+import { useDispatch } from 'react-redux';
 import { logout } from 'redux/auth/AuthOperations';
-import Button from 'shared/ButtonForm/ButtonForm';
+import { useAuth } from 'shared/Hooks';
+
 import styles from './navbar-user.module.css';
 
 const NavbarUser = () => {
-  const { name, email } = useSelector(getUser);
-  const isLogin = useSelector(isLoggedIn);
-  console.log(isLogin);
   const dispatch = useDispatch();
+  const { user } = useAuth();
 
   return (
     <div className={styles.wrap}>
-      name: {name} email: {email}
-      {isLogin && (
-        <Button
-          onClick={() => {
-            dispatch(logout());
-          }}
-        >
-          LogOut
-        </Button>
-      )}
-      {/* {!isLogin && <Navigate to="/" />} */}
+      <p>Welcome, {user.name}</p>
+      <button
+        className={styles.btn}
+        type="button"
+        onClick={() => dispatch(logout())}
+      >
+        Log Out
+      </button>
     </div>
   );
 };
-
 export default NavbarUser;
-
-// import { logout } from 'redux/auth/AuthOperations';
-// import Button from 'shared/ButtonForm/ButtonForm';
-
-// const NavbarUser = () => {
-//   const { name, email } = useSelector(getUser);
-//   const dispatch = useDispatch();
-
-//   const onLogout = () => {
-//     dispatch(logout());
-//   };
-//   console.log(name, email);
-
-//   return (
-//     <div>
-//       You entered to PhoneBook with name: {name}| email: {email}
-//       <Button onClick={onLogout}>LogOut</Button>
-//     </div>
-//   );
-// };
-
-// export default NavbarUser;

@@ -4,13 +4,13 @@ import styles from './navbar-auth.module.css';
 
 const NavbarAuth = () => {
   return (
-    <div>
+    <div className={styles.wrap}>
       <NavLink to="/register" className={styles.link}>
-        Register
+        <span>Register In</span>
       </NavLink>
-      |
+
       <NavLink to="/login" className={styles.link}>
-        Login
+        <span>Log In</span>
       </NavLink>
     </div>
   );

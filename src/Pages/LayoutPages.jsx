@@ -12,17 +12,19 @@ export const LayoutPages = () => {
         style={{
           display: 'flex',
           height: '100vh',
+          maxWidth: 1240,
         }}
       >
-        <div>
+        <div
+          style={{
+            height: '100vh',
+          }}
+        >
           <Navbar />
         </div>
         <div
           style={{
             margin: 'auto',
-            //   padding: '0 16px',
-            // display: 'flex',
-            // height: '100vh',
           }}
         >
           <Suspense fallback={null}>

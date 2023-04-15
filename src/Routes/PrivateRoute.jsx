@@ -1,14 +1,26 @@
 import { Navigate } from 'react-router-dom';
-import { useSelector } from 'react-redux';
-import { getAuth } from 'redux/auth/AuthSelectors';
+import { useAuth } from 'shared/Hooks';
 
 const PrivateRoute = ({ component: Component, redirectTo = '/' }) => {
-  const { isLogin, token } = useSelector(getAuth);
-  const shouldRedirect = !isLogin && !token;
+  const { isLoggedIn, isRefreshing } = useAuth();
+  const shouldRedirect = !isLoggedIn && !isRefreshing;
+
   return shouldRedirect ? <Navigate to={redirectTo} /> : Component;
 };
 
 export default PrivateRoute;
+
+// import { Navigate } from 'react-router-dom';
+// import { useSelector } from 'react-redux';
+// import { getAuth } from 'redux/auth/AuthSelectors';
+
+// const PrivateRoute = ({ component: Component, redirectTo = '/' }) => {
+//   const { isLogin, token } = useSelector(getAuth);
+//   const shouldRedirect = !isLogin && !token;
+//   return shouldRedirect ? <Navigate to={redirectTo} /> : Component;
+// };
+
+// export default PrivateRoute;
 // import { Navigate, Outlet } from 'react-router-dom';
 // import { useSelector } from 'react-redux';
 // import { getAuth } from 'redux/auth/AuthSelectors';
