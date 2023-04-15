@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom';
 
 import styles from './navbar-auth.module.css';
-
+// import { Wrap } from './NavbarAuth.styled';
 const NavbarAuth = () => {
   return (
     <div className={styles.wrap}>

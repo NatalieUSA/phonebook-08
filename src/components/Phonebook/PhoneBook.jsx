@@ -5,17 +5,17 @@ import { Title } from 'shared/Title/Title';
 import { GlobalStyle } from 'components/GlobalStyle';
 import { Layout } from 'components/Layout';
 // import { selectLoading } from 'redux/contacts/ContactsSelector';
-// import { fetchContacts } from 'redux/contacts/ContactsOperations';
-// import { useDispatch, useSelector } from 'react-redux';
-// import { useEffect } from 'react';
+import { fetchContacts } from 'redux/contacts/ContactsOperations';
+import { useDispatch } from 'react-redux';
+import { useEffect } from 'react';
 
 const PhoneBook = () => {
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
   // const isLoading = useSelector(selectLoading);
 
-  // useEffect(() => {
-  //   dispatch(fetchContacts());
-  // }, [dispatch]);
+  useEffect(() => {
+    dispatch(fetchContacts());
+  }, [dispatch]);
 
   return (
     <Layout>
