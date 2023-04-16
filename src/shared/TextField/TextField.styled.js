@@ -1,33 +1,23 @@
-.wrapper {
-  /* display: grid;
-  grid-template-columns: 120px 1fr;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 15px; */
+import styled from 'styled-components';
+
+export const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  /* flex-direction: column; */
   overflow: overlay;
   gap: 10px;
-  /* width: 500px;
-  height: 15%; */
   box-sizing: border-box;
   list-style: none;
   margin: 30px auto;
-  /* padding: 40px; */
-  /* background-color: yellow; */
-}
+`;
 
-.field {
+export const InputStyled = styled.input`
   padding: 10px;
-  /* border: 1px solid; */
   border-radius: 25px;
-  width: 80%;
+  width: 100%;
   background: transparent;
   border: none;
   border-bottom: 0.5px solid deeppink;
-
   outline: transparent;
   margin-right: auto;
   margin-left: auto;
@@ -35,4 +25,4 @@
   color: #68b4cf;
   box-shadow: inset 6px 6px 6px 0px #68b4cf, inset -6px -10px 10px 0px #68b4cf;
   background-color: deeppink;
-}
+`;

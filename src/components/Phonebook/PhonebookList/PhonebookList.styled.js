@@ -11,7 +11,7 @@ export const List = styled.ul`
   position: relative;
   display: block;
   overflow: overlay;
-  // max-height: 350px;
+
   box-sizing: border-box;
   list-style: none;
   margin: 0 auto;
@@ -28,14 +28,36 @@ export const List = styled.ul`
   @media (max-width: 419px) {
     width: 95%;
   }
-
   @media (min-width: 420px) {
-    width: 75%;
+    width: 85%;
   }
   @media (min-width: 768px) {
     width: 65%;
   }
-  @media (min-width: 1020px) {
+  @media (min-width: 1240px) {
     width: 60%;
+  }
+`;
+
+export const Btn = styled.button`
+  cursor: pointer;
+  display: inline-block;
+  outline: none;
+  border-radius: 50px;
+  background-color: #68b4cf;
+  color: yellow;
+
+  text-align: center;
+  border-style: none;
+  box-shadow: 2px 2px 1px grey;
+  font-size: x-small;
+  height: 35px;
+  width: 50px;
+  line-height: 1;
+
+  :hover {
+    text-transform: lowercase;
+    background-color: yellow;
+    color: #68b4cf;
   }
 `;

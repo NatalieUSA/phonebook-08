@@ -1,18 +1,16 @@
-import { NavLink } from 'react-router-dom';
+import { NavLinkStyled, Wrap } from './NavbarAuth.styled';
 
-import styles from './navbar-auth.module.css';
-// import { Wrap } from './NavbarAuth.styled';
 const NavbarAuth = () => {
   return (
-    <div className={styles.wrap}>
-      <NavLink to="/register" className={styles.link}>
+    <Wrap>
+      <NavLinkStyled to="/register">
         <span>Register In</span>
-      </NavLink>
+      </NavLinkStyled>
 
-      <NavLink to="/login" className={styles.link}>
+      <NavLinkStyled to="/login">
         <span>Log In</span>
-      </NavLink>
-    </div>
+      </NavLinkStyled>
+    </Wrap>
   );
 };
 

@@ -1,11 +1,7 @@
-import styles from './button-form.module.css';
+import { ButtonForm } from './ButtonForm.styled';
 
 const Button = ({ children, type = 'submit' }) => {
-  return (
-    <button type={type} className={styles.btn}>
-      {children}
-    </button>
-  );
+  return <ButtonForm type={type}>{children}</ButtonForm>;
 };
 
 export default Button;

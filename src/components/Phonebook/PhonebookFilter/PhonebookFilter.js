@@ -1,10 +1,7 @@
 import { FormGroup, Label, Input } from './PhonebookFilter.styled';
 import { useSelector, useDispatch } from 'react-redux';
-// import { getFilter } from 'components/redux/filter/FilterSelectors';
 import { getFilter } from 'redux/filter/FilterSelectors';
 import { setFilter } from 'redux/filter/FilterSlice';
-// import { useSelector, useDispatch } from 'react-redux';
-// import { setFilter } from 'components/redux/filter/FilterSlice';
 
 export const PhonebookFilter = () => {
   const dispatch = useDispatch();

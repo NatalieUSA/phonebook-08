@@ -1,12 +1,10 @@
-import { BsTelephone } from 'react-icons/bs';
-import { ListItem } from './PhonebookList.styled';
-import { List } from './PhonebookList.styled';
-// import { Btn } from 'components/shared/Button/Button.styled';
-import { Btn } from 'shared/Button/Button.styled';
 import { getFilteredContacts } from 'redux/contacts/ContactsSelector';
 import { useSelector, useDispatch } from 'react-redux';
-import { Title } from 'shared/Title/Title';
 import { fetchDeleteContact } from 'redux/contacts/ContactsOperations';
+
+import { BsTelephone } from 'react-icons/bs';
+import { List, ListItem, Btn } from './PhonebookList.styled';
+import { Title } from 'shared/Title/Title';
 
 export const PhonebookList = () => {
   const filteredContacts = useSelector(getFilteredContacts);

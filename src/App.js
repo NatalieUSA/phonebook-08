@@ -16,18 +16,19 @@ import { refreshUser } from 'redux/auth/AuthOperations';
 import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import { useAuth } from 'shared/Hooks';
+import { Loader } from 'shared/Loader/Loader';
 
 const App = () => {
   const dispatch = useDispatch();
   const { isRefreshing } = useAuth();
-  console.log(isRefreshing);
 
   useEffect(() => {
     dispatch(refreshUser());
   }, [dispatch]);
 
   return isRefreshing ? (
-    <b>Refreshing user...</b>
+    // <b>Refreshing user...</b>
+    <Loader />
   ) : (
     <Routes>
       <Route path="/" element={<LayoutPages />}>

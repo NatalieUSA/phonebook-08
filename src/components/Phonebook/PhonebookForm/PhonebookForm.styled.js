@@ -11,31 +11,22 @@ export const FormGroup = styled.div`
   height: 15%;
   box-sizing: border-box;
   list-style: none;
-  margin: 30px auto;
+  margin: 10px auto;
   padding: 40px;
   background-color: rgb(2, 221, 250, 0.95);
   border-radius: 25px;
-  box-shadow: inset 6px 6px 6px 0px rgb(250, 9, 137),
-    inset -6px -10px 10px 0px rgb(250, 9, 137);
-  &::-webkit-scrollbar {
-    width: 10px;
-  }
-  &::-webkit-scrollbar-thumb {
-    background-color: rgb(255 255 255 / 8%); /* цвет бегунка */
-    border-radius: 3px; /* округлось бегунка */
-    border: 2px solid #cd5a79; /* отступ вокруг бегунка */
-  }
 
+  box-shadow: inset 6px 6px 6px 0px #68b4cf, inset -6px -10px 10px 0px #68b4cf;
   @media (max-width: 419px) {
     width: 95%;
   }
   @media (min-width: 420px) {
-    width: 75%;
+    width: 85%;
   }
   @media (min-width: 768px) {
     width: 65%;
   }
-  @media (min-width: 1020px) {
+  @media (min-width: 1240px) {
     width: 60%;
   }
 `;
