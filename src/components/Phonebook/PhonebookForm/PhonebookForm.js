@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 import { initialState } from './initialState';
 import { FormGroup, Input, Label } from './PhonebookForm.styled';
@@ -6,19 +6,12 @@ import { FormBtn } from './PhonebookForm.styled';
 
 import { useDispatch } from 'react-redux';
 
-import {
-  fetchContacts,
-  fetchAddContact,
-} from 'redux/contacts/ContactsOperations';
+import { fetchAddContact } from 'redux/contacts/ContactsOperations';
 
 export const PhonebookForm = () => {
   const [state, setState] = useState({ ...initialState });
 
   const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(fetchContacts());
-  }, [dispatch]);
 
   const handleAddContact = ({ name, number }) => {
     dispatch(fetchAddContact({ name, number }));

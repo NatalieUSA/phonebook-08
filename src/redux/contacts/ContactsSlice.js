@@ -44,7 +44,7 @@ export const contactsSlice = createSlice({
       })
       .addCase(fetchDeleteContact.fulfilled, (store, { payload }) => {
         store.loading = false;
-        const index = store.items.findIndex(item => item.id === payload);
+        const index = store.items.findIndex(item => item.id === payload.id);
         store.items.splice(index, 1);
       })
       .addCase(fetchDeleteContact.rejected, (store, { payload }) => {
