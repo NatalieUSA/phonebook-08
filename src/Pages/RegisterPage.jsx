@@ -3,6 +3,7 @@ import { register } from 'redux/auth/AuthOperations';
 
 import RegisterForm from 'components/RegisterForm/RegisterForm';
 import { Wrapper } from 'shared/Wrapper/Wrapper';
+
 const RegisterPage = () => {
   const dispatch = useDispatch();
   const handleRegister = data => {

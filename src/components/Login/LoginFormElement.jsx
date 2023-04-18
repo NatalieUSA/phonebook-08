@@ -1,10 +1,10 @@
+import PropTypes from 'prop-types';
+import useForm from 'shared/Hooks/useForm';
+import initialState from './initialState';
+
 import TextField from 'shared/TextField/TextField';
 import Button from 'shared/ButtonForm/ButtonForm';
-
-import useForm from 'shared/Hooks/useForm';
-
 import fields from './fields';
-import initialState from './initialState';
 
 const LoginFormElement = ({ onSubmit }) => {
   const { state, handleChange, handleSubmit } = useForm({
@@ -27,3 +27,7 @@ const LoginFormElement = ({ onSubmit }) => {
 };
 
 export default LoginFormElement;
+
+LoginFormElement.propTypes = {
+  onSubmit: PropTypes.func.isRequired,
+};
